@@ -270,7 +270,7 @@
         .showcase {
             padding: 100px 40px;
         }
-        .showcase:nth-child(even) { background: var(--gray-900); }
+        .showcase.dark-bg { background: var(--gray-900); }
         .showcase-inner {
             max-width: 1200px;
             margin: 0 auto;
@@ -312,41 +312,6 @@
             margin-bottom: 16px;
         }
 
-        /* Features grid */
-        .features {
-            padding: 120px 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-        .feature-card {
-            background: var(--gray-900);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 20px;
-            padding: 36px;
-            transition: all 0.3s ease;
-        }
-        .feature-card:hover {
-            border-color: rgba(255,214,10,0.15);
-            transform: translateY(-4px);
-        }
-        .feature-icon {
-            width: 48px; height: 48px;
-            border-radius: 12px;
-            background: rgba(255,214,10,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-        }
-        .feature-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
-        .feature-card p { color: var(--gray-400); line-height: 1.65; font-size: 0.95rem; }
-
         /* Multi-device banner */
         .multi-device {
             padding: 80px 40px;
@@ -356,6 +321,11 @@
             max-width: 1000px;
             margin: 0 auto;
             text-align: center;
+        }
+        .multi-device-desc {
+            color: var(--gray-400);
+            font-size: 1.1rem;
+            margin-top: -40px;
         }
         .multi-device-inner img {
             width: 100%;
@@ -463,9 +433,23 @@
         .footer-links a { color: var(--gray-400); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
         .footer-links a:hover { color: var(--white); }
 
+        .mobile-download-btn {
+            display: none;
+            background: var(--banana);
+            color: var(--dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .mobile-download-btn:hover { transform: translateY(-1px); }
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links { display: none; }
+            .mobile-download-btn { display: inline-block; }
             .hero { padding: 120px 24px 60px; }
             .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
             .hero-desc { margin-left: auto; margin-right: auto; }
@@ -500,6 +484,7 @@
                 <a href="#faq">FAQ</a>
                 <a href="https://apps.apple.com/app/bananaplayer-iptv/id6759906219" class="nav-cta" target="_blank">Download</a>
             </div>
+            <a href="https://apps.apple.com/app/bananaplayer-iptv/id6759906219" class="mobile-download-btn" target="_blank">Download</a>
         </div>
     </nav>
 
@@ -550,7 +535,7 @@
     </section>
 
     <!-- Showcase: Mac -->
-    <section class="showcase reverse">
+    <section class="showcase reverse dark-bg">
         <div class="showcase-inner">
             <div class="showcase-image">
                 <img src="assets/images/mac-lifestyle.jpg" alt="BananaPlayer on Mac" loading="lazy">
@@ -584,7 +569,7 @@
         <div class="multi-device-inner">
             <div class="section-label">All Your Devices</div>
             <h2 class="section-title">One app. Every screen.</h2>
-            <p style="color: var(--gray-400); font-size: 1.1rem; margin-top: -40px; margin-bottom: 0;">Your playlists, favorites, and history — everywhere you watch.</p>
+            <p class="multi-device-desc">Your playlists, favorites, and history — everywhere you watch.</p>
             <img src="assets/images/multi-device.jpg" alt="BananaPlayer on multiple devices" loading="lazy">
         </div>
     </section>
@@ -636,7 +621,7 @@
                 </ul>
             </div>
             <div class="privacy-visual">
-                <img src="assets/images/banana-guard.png?v=2" alt="Banana Guard protecting your privacy" loading="lazy">
+                <img src="assets/images/banana-guard.png" alt="Banana Guard protecting your privacy" loading="lazy">
             </div>
         </div>
     </section>
