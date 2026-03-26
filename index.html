@@ -401,11 +401,10 @@
         }
         .privacy-list li::before { content: '✓'; color: #22C55E; font-weight: 700; font-size: 1rem; }
         .privacy-visual { display: flex; align-items: center; justify-content: center; }
-        .shield-graphic {
-            width: 280px; height: 280px; border-radius: 50%;
-            background: radial-gradient(circle, rgba(34,197,94,0.08) 0%, transparent 70%);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 8rem; border: 2px solid rgba(34,197,94,0.1);
+        .privacy-visual img {
+            max-height: 380px;
+            width: auto;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
         }
 
         /* FAQ */
@@ -464,7 +463,7 @@
             .how-it-works, .faq, .showcase, .multi-device { padding: 80px 24px; }
             .privacy-grid { grid-template-columns: 1fr; gap: 40px; }
             .privacy-visual { order: -1; }
-            .shield-graphic { width: 200px; height: 200px; font-size: 5rem; }
+            .privacy-visual img { max-height: 280px; }
             .cta-buttons { flex-direction: column; align-items: center; }
             .footer-inner { flex-direction: column; text-align: center; }
         }
@@ -621,7 +620,7 @@
                 </ul>
             </div>
             <div class="privacy-visual">
-                <div class="shield-graphic">🛡️</div>
+                <img src="assets/images/banana-guard.png" alt="Banana Guard protecting your privacy" loading="lazy">
             </div>
         </div>
     </section>
