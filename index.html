@@ -156,12 +156,15 @@
             width: 100%;
         }
         .hero-text { position: relative; z-index: 1; }
-        .hero-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 18px;
-            margin-bottom: 24px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        .hero-appname {
+            display: block;
+            font-size: 0.4em;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--banana);
+            margin-bottom: 8px;
+            -webkit-text-fill-color: var(--banana);
+            background: none;
         }
         .hero-badge {
             display: inline-flex;
@@ -504,9 +507,8 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-text">
-                <img src="assets/images/bananaplayer-icon.png" alt="BananaPlayer" class="hero-icon">
                 <div class="hero-badge">🍌 Now available on the App Store</div>
-                <h1>IPTV that <span class="highlight">just works.</span></h1>
+                <h1><span class="hero-appname">BananaPlayer</span>IPTV that <span class="highlight">just works.</span></h1>
                 <p class="hero-desc">A clean, modern player for your M3U playlists and Xtream servers. No clutter, no bloat, no tracking — just your content, beautifully played.</p>
                 <div class="hero-buttons">
                     <a href="https://apps.apple.com/app/bananaplayer-iptv/id6759906219" class="download-btn primary" target="_blank">
