@@ -156,6 +156,13 @@
             width: 100%;
         }
         .hero-text { position: relative; z-index: 1; }
+        .hero-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -429,6 +436,13 @@
         /* CTA */
         .cta { padding: 120px 40px; text-align: center; }
         .cta-inner { max-width: 700px; margin: 0 auto; }
+        .cta-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
         .cta h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 16px; letter-spacing: -0.02em; }
         .cta p { color: var(--gray-400); font-size: 1.1rem; margin-bottom: 40px; }
         .cta-buttons { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
@@ -490,6 +504,7 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-text">
+                <img src="assets/images/bananaplayer-icon.png" alt="BananaPlayer" class="hero-icon">
                 <div class="hero-badge">🍌 Now available on the App Store</div>
                 <h1>IPTV that <span class="highlight">just works.</span></h1>
                 <p class="hero-desc">A clean, modern player for your M3U playlists and Xtream servers. No clutter, no bloat, no tracking — just your content, beautifully played.</p>
@@ -655,6 +670,7 @@
     <!-- CTA -->
     <section class="cta">
         <div class="cta-inner">
+            <img src="assets/images/bananaplayer-icon.png" alt="BananaPlayer" class="cta-icon">
             <h2>Ready to ditch the clutter?</h2>
             <p>Download BananaPlayer and start watching your way — clean, fast, and private.</p>
             <div class="cta-buttons">
